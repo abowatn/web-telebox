@@ -9,8 +9,7 @@
 
 <script>
   import AcNavbar from '@/components/Navbar'
-  require('./assets/css/main.css')
-
+  
   export default {
     components: { AcNavbar },
     name: 'app'
