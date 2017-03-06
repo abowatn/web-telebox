@@ -10,16 +10,18 @@
     ready () {
       Vue.axios.get('http://localhost:5000/images').then((response) => {
         this.images = response
+        console.log(response)
       })
     },
-    data(){
-       return {
-         msg: ''
-       }
-     }
-   }
+    data () {
+      return {
+        images: '',
+        URL: 'http://localhost:5000/',
+        src: ''
+      }
+    }
+  }
 </script>
-
 <template>
     <section id="works" class="wrapper style2">
       <div class="container">
