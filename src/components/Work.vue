@@ -1,15 +1,23 @@
 <script>
-    import Vue from 'vue'
-    import VueResource from 'vue-resource'
-    Vue.use(VueResource)
-    export default {
-      name: 'work',
-      data () {
-        return {
-          image: ''
-        }
-      }
-    }
+  import Vue from 'vue'
+  import axios from 'axios'
+  import VueAxios from 'vue-axios'
+
+  Vue.use(VueAxios, axios)
+
+  export default {
+    name: 'work',
+    ready () {
+      Vue.axios.get('http://localhost:5000/images').then((response) => {
+        this.images = response
+      })
+    },
+    data(){
+       return {
+         msg: ''
+       }
+     }
+   }
 </script>
 
 <template>
