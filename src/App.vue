@@ -9,7 +9,6 @@
 
 <script>
   import AcNavbar from '@/components/Navbar'
-  
   export default {
     components: { AcNavbar },
     name: 'app'
@@ -19,6 +18,6 @@
   }
 </script>
 
-<style scoped>
+<style src="./assets/sass/app.scss" lang="sass">
 
 </style>

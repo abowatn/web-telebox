@@ -6,9 +6,9 @@
             <h2>Trabalhos: <em>Coheça mais sobre nossos trabalhos</em></h2>
             <a v-link="{ path: '/work' }" class="button">Mais</a>
         </header>
-    
+
     </section>
-    
+
     <!-- Highlights -->
     <section class="wrapper style1">
         <div class="container">
@@ -37,7 +37,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Gigantic Heading -->
     <section class="wrapper style2">
         <div class="container">
@@ -47,7 +47,7 @@
             </header>
         </div>
     </section>
-    
+
     <!-- Posts -->
     <section class="wrapper style1">
         <div class="container">
@@ -93,7 +93,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- CTA -->
     <section id="cta" class="wrapper style3">
         <div class="container">
@@ -102,11 +102,11 @@
             </header>
         </div>
     </section>
-    
+
     <!-- Footer -->
     <div id="footer">
-        
-   
+
+
         <!-- Icons -->
         <ul class="icons">
             <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
@@ -115,14 +115,14 @@
             <li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
             <li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
         </ul>
-    
+
         <!-- Copyright -->
         <div class="copyright">
             <ul class="menu">
                 <li>&copy; ACampaganro Ltda. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
             </ul>
         </div>
-    
+
     </div>
 
 </template>
