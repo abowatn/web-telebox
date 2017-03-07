@@ -3,8 +3,11 @@
     name: 'menu'
   }
 </script>
-<template>    
+<template>
     <div id="header">
+
+      <router-link to="/admin">Login</router-link>
+
       <!-- Address -->
       <ul id="address">
         <!--<li><h2><i class="fa fa-phone"></i> (41) 3345-5654</h2></li> -->

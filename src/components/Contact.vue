@@ -1,54 +1,44 @@
 <script>
     import Vue from 'vue'
-    import VueResource from 'vue-resource'
+    import axios from 'axios'
+    import VueAxios from 'vue-axios'
     import AcFooter from '@/components/Footer'
 
-    Vue.use(VueResource)
+    Vue.use(VueAxios, axios)
 
     export default {
-        methods:{
-            sendMessage(events){
-                events.preventDefault()
-                Vue.http.post('http://localhost:5000/sendmail', this.contact).then((response) => {
-
-                  // get status
-                  response.status;
-
-                  // get status text
-                  response.statusText;
-
-                  // get all headers
-                  response.headers;
-
-                  // get 'Expires' header
-                  response.headers['Expires'];
-
-                  // set data on vm
-                  //this.$set('error', response.json())
-
-                  this.message = 'E-mail enviado com sucesso!';
-                  this.isVisible = true;
-
-              }, (error) => {
-                  this.message = error.body;
-                  this.isVisible = true;
-              });
-            }
-        },
-        data(){
-            return {
-                message: '',
-                isVisible: false,
-                contact: {}
-            }
-        },
-        component: {
-          AcFooter
+      name: 'Contato',
+      methods: {
+        sendMessage (events) {
+          events.preventDefault()
+          console.log(this.contact)
+          Vue.axios.post('http://localhost:5000/sendmail', this.contact).then((response) => {
+            response.status
+            response.statusText
+            response.headers
+            response.headers['Expires']
+            this.message = 'E-mail enviado com sucesso!'
+            this.isVisible = true
+          }).catch(e => {
+            console.log(e)
+          })
         }
-}
+      },
+      components: {
+        AcFooter
+      },
+      data () {
+        return {
+          message: '',
+          isVisible: false,
+          contact: {}
+        }
+      }
+    }
 </script>
 
 <template>
+    <section>
     <!-- Footer -->
     <div id="footer">
         <div class="container">
@@ -101,7 +91,7 @@
         <ac-footer></ac-footer>
 
     </div>
-
+  </section>
 </template>
 
 <style scoped>

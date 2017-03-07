@@ -2,15 +2,15 @@
   import Vue from 'vue'
   import axios from 'axios'
   import VueAxios from 'vue-axios'
+  import AcFooter from '@/components/Footer'
 
   Vue.use(VueAxios, axios)
 
   export default {
     name: 'work',
-    ready () {
+    mounted () {
       Vue.axios.get('http://localhost:5000/images').then((response) => {
-        this.images = response
-        console.log(response)
+        this.images = response.data
       })
     },
     data () {
@@ -19,7 +19,8 @@
         URL: 'http://localhost:5000/',
         src: ''
       }
-    }
+    },
+    components: { AcFooter }
   }
 </script>
 <template>
@@ -31,6 +32,7 @@
             </li>
         </ul>
       </div>
+      <ac-footer></ac-footer>
     </section>
 </template>
 <style scoped>
