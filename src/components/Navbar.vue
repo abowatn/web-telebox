@@ -1,12 +1,23 @@
 <script>
+  import AcLogin from '@/components/Login'
   export default{
-    name: 'menu'
+    name: 'Navbar',
+    components: {
+      AcLogin
+    },
+    data () {
+      return {
+        showModal: false
+      }
+    }
   }
 </script>
 <template>
     <div id="header">
 
-      <router-link to="/admin">Login</router-link>
+      <ac-login v-if="showModal" @close="showModal = false"></ac-login>
+
+      <button @click="showModal = true">Mostra modal</button>
 
       <!-- Address -->
       <ul id="address">
@@ -34,3 +45,5 @@
       </nav>
     </div>
 </template>
+
+<style scoped></style>

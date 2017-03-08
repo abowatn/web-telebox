@@ -12,9 +12,6 @@
   export default {
     components: { AcNavbar },
     name: 'app'
-    // styles: [
-    //   require('assets/css/main.css')
-    // ],
   }
 </script>
 
