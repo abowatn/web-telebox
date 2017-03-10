@@ -2,34 +2,32 @@
   import { range } from 'lodash'
   export default {
     props: [
-        'source'
+      'source'
     ],
-    data(){
-        return {
-            pages: []
-        }
+    data () {
+      return {
+        pages: []
+      }
     },
-    methods:{
-        navigate(ev, page){
-            ev.preventDefault()
-            this.$dispatch('navigate', page)
-        },
-        nextPage (ev, page){
-            if (page == 0 || page == this.source.totalPages + 1){
-              return;
-            }
-            ev.preventDefault();
-            this.navigate(ev. page);
-        },
+    methods: {
+      navigate (ev, page) {
+        ev.preventDefault()
+        this.$dispatch('navigate', page)
+      },
+      nextPage (ev, page) {
+        if (page === 0 || page === this.source.totalPages + 1) {
+          return
+        }
+        ev.preventDefault()
+        this.navigate(ev, page)
+      }
     },
     watch: {
-        source(){
-            this.pages = range(1, this.source.totalPages + 1)
-        }
+      source () {
+        this.pages = range(1, this.source.totalPages + 1)
+      }
     }
-
   }
-
 </script>
 
 <template>
@@ -49,9 +47,9 @@
         </a>
       </li>
     </ul>
-  </nav>  
+  </nav>
 </template>
 
 <style type="text/css" scoped>
-  
+
 </style>

@@ -9,7 +9,7 @@
 
 <script>
   import 'jquery'
-//  import 'bootstrap/dist/js/bootstrap'
+  import 'bootstrap/dist/js/bootstrap'
   import AcNavbar from '@/components/Navbar'
   export default {
     components: { AcNavbar },

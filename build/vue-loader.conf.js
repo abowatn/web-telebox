@@ -1,5 +1,5 @@
 var ExtractTextPlugin = require("extract-text-webpack-plugin")
-
+var webpack = require('webpack');
 var utils = require('./utils')
 var config = require('../config')
 var isProduction = process.env.NODE_ENV === 'production'
@@ -28,7 +28,11 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin("main.css")
+    new ExtractTextPlugin("main.css"),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
+    })
   ]
 
 }

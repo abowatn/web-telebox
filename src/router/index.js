@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Hello from '@/components/Hello'
 import Home from '@/components/Home'
 import Work from '@/components/Work'
 import Contact from '@/components/Contact'
@@ -12,8 +11,7 @@ export default new VueRouter({
   routes: [
     {
       path: '/',
-      name: 'Hello',
-      component: Hello
+      redirect: '/home'
     },
     {
       path: '/home',
