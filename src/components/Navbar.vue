@@ -17,9 +17,9 @@
 
     <ac-login v-if="showModal" @close="showModal = false"></ac-login>
 
-    <button @click="showModal = true">Mostra modal</button>
+    <!--    <button @click="showModal = true">Mostra modal</button> -->
 
-    <!-- Logo -->
+        <!-- Logo -->
     <h1><a href="index.html" id="logo"><img src="../assets/images/logo.png"></a></h1>
 
     <!-- Address -->
@@ -29,17 +29,17 @@
 
     <!-- Nav -->
     <nav id="nav">
-      <ul>
-        <li router-link to="/home">
-          <router-link to="/home" active-class="true">Home</router-link>
+      <ul >
+        <li>
+          <router-link  activeClass="current" to="/home" active-class="true">Home</router-link>
         </li>
-        <li router-link to = "/work">
+        <li>
           <router-link to="/work">Trabalhos</router-link>
         </li>
-        <li router-link="{ path: '/contact', activeClass: 'current' }">
+        <li>
           <router-link to="/contact">Contato</router-link>
         </li>
-        <li router-link="{ path: '/admin', activeClass: 'current' }">
+        <li>
           <router-link to="/admin">Admin</router-link>
         </li>
       </ul>
@@ -49,7 +49,7 @@
 
 <style scoped>
   #address{
-    margin-top: -50px;
+    margin-top: -30px;
   }
   #adress h2 {
     margin-botton: -25px;
